@@ -50,10 +50,11 @@ Assets/
 │   │   ├── Core/
 │   │   │   ├── Reviews/       Review.cs, IReviewRepository.cs, ReviewService.cs
 │   │   │   ├── Area/          AreaManager.cs, MeshCode.cs
+│   │   │   ├── City/          都市API（GET /v1/cities/{cityId}/snapshot）のデータ・読み込み・建物と住民の配置
 │   │   │   ├── Avatars/       ResidentAvatar.cs, AvatarSpawner.cs
 │   │   │   ├── Interaction/   IInteractable.cs
 │   │   │   └── TimeOfDay/     TimeOfDayController.cs
-│   │   ├── Infrastructure/    LocalReviewRepository.cs, SupabaseReviewRepository.cs
+│   │   ├── Infrastructure/    LocalReviewRepository.cs, SupabaseReviewRepository.cs, 都市APIの通信（CitySnapshotLoader など）
 │   │   ├── Platform/
 │   │   │   ├── VR/
 │   │   │   ├── Desktop/       （エディタ確認用・将来のWeb版デスクトップ操作の下地）
@@ -65,7 +66,8 @@ Assets/
 │   ├── Art/               Materials, Models, Textures, Audio
 │   ├── CityData/          PLATEAUで取り込んだ街のデータ
 │   ├── Data/              設定ファイル、仮の口コミJSONなど
-│   └── Settings/          URPの設定など
+│   ├── Settings/          URPの設定など
+│   └── Tests~/            Unityの外で動かすテスト（dotnet test）とテスト項目。「~」で終わるフォルダはUnityが読み込まない
 └── （SDKやサンプル）      触らない
 ```
 

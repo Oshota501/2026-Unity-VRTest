@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Text;
 using TMPro;
 using TownReview.Core.Avatars;
+using TownReview.Core.City;
 using TownReview.Core.Reviews;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ namespace TownReview.UI
     // 口コミを画面に重ねる2DのCanvas UI（掲示板のような一覧パネル）として表示する。
     // 3D空間内に文字を浮かべる形にはしない。
     // ResidentAvatarのReviewsRequestedイベントを購読し、Interact()が呼ばれたら表示する。
+    // 都市API（CitySnapshot）の住民 CityResident に触れたときも、同じパネルにコメント全文を表示する。
     public class ReviewPanel : MonoBehaviour
     {
         [SerializeField] private GameObject panelRoot;
@@ -26,11 +28,13 @@ namespace TownReview.UI
         private void OnEnable()
         {
             ResidentAvatar.ReviewsRequested += Show;
+            CityResident.CommentRequested += ShowResident;
         }
 
         private void OnDisable()
         {
             ResidentAvatar.ReviewsRequested -= Show;
+            CityResident.CommentRequested -= ShowResident;
         }
 
         public void Show(IReadOnlyList<Review> reviews)
@@ -38,6 +42,24 @@ namespace TownReview.UI
             if (contentText != null)
             {
                 contentText.text = BuildDisplayText(reviews);
+            }
+
+            if (panelRoot != null)
+            {
+                panelRoot.SetActive(true);
+            }
+        }
+
+        public void ShowResident(CityResident resident)
+        {
+            if (resident == null || resident.Data == null)
+            {
+                return;
+            }
+
+            if (contentText != null)
+            {
+                contentText.text = BuildResidentText(resident);
             }
 
             if (panelRoot != null)
@@ -72,6 +94,57 @@ namespace TownReview.UI
             }
 
             return builder.ToString();
+        }
+
+        private static string BuildResidentText(CityResident resident)
+        {
+            AvatarData data = resident.Data;
+            var builder = new StringBuilder();
+
+            if (data.Voice != "")
+            {
+                builder.AppendLine($"■ {data.Voice}");
+            }
+
+            BuildingData building = resident.RelatedBuilding;
+            if (building != null)
+            {
+                string place = building.Name != "" ? $"{building.Name}（{ToLabel(building.CategoryType)}）" : ToLabel(building.CategoryType);
+                builder.AppendLine($"場所：{place}");
+            }
+
+            builder.AppendLine($"気分：{ToLabel(resident.Emotion)}");
+            builder.AppendLine();
+            builder.AppendLine(data.Comment != "" ? data.Comment : "（コメントはありません）");
+            return builder.ToString();
+        }
+
+        private static string ToLabel(BuildingCategory category)
+        {
+            switch (category)
+            {
+                case BuildingCategory.House: return "戸建て";
+                case BuildingCategory.Apartment: return "集合住宅";
+                case BuildingCategory.Supermarket: return "スーパー";
+                case BuildingCategory.ConvenienceStore: return "コンビニ";
+                case BuildingCategory.Restaurant: return "飲食店";
+                case BuildingCategory.Station: return "駅";
+                case BuildingCategory.Park: return "公園";
+                case BuildingCategory.School: return "学校";
+                case BuildingCategory.Hospital: return "病院";
+                default: return "その他";
+            }
+        }
+
+        private static string ToLabel(ResidentEmotion emotion)
+        {
+            switch (emotion)
+            {
+                case ResidentEmotion.Happy: return "満足";
+                case ResidentEmotion.Annoyed: return "不満";
+                case ResidentEmotion.Worried: return "不安";
+                default: return "ふつう";
+            }
         }
 
         private static string ToLabel(TimeOfDay timeOfDay)
