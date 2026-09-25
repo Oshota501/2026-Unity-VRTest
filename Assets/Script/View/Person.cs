@@ -24,7 +24,9 @@ public class Person : MonoBehaviour
         {
             if (target == null) return;
 
+            // TextMeshPro は裏側から見ると文字が反転するため、ターゲットの方向を向いたあと180度回転させて正面を向ける
             transform.LookAt(target);
+            transform.Rotate(0f, 180f, 0f);
         }
     }
     private Vector3 bassHeight;
