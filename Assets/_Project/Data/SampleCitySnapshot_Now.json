@@ -1,0 +1,112 @@
+{
+  "cityId": "sample",
+  "cityName": "サンプル市",
+  "mode": "now",
+  "generatedAt": "2026-09-25T09:00:00Z",
+  "bounds": {
+    "min": { "x": -200.0, "y": 0.0, "z": -200.0 },
+    "max": { "x": 200.0, "y": 0.0, "z": 200.0 }
+  },
+  "buildings": [
+    {
+      "id": "b001",
+      "name": "サンプルマート",
+      "category": "supermarket",
+      "position": { "x": 20.0, "y": 0.0, "z": 40.0 },
+      "rotationY": 90.0,
+      "size": { "x": 20.0, "y": 6.0, "z": 15.0 }
+    },
+    {
+      "id": "b002",
+      "name": "コンビニ駅前店",
+      "category": "convenience_store",
+      "position": { "x": -30.0, "y": 0.0, "z": 10.0 },
+      "rotationY": 0.0,
+      "size": { "x": 10.0, "y": 4.0, "z": 8.0 }
+    },
+    {
+      "id": "b003",
+      "name": "サンプル駅",
+      "category": "station",
+      "position": { "x": -60.0, "y": 0.0, "z": 0.0 },
+      "rotationY": 0.0,
+      "size": { "x": 40.0, "y": 10.0, "z": 12.0 }
+    },
+    {
+      "id": "b004",
+      "name": "",
+      "category": "apartment",
+      "position": { "x": 50.0, "y": 0.0, "z": -30.0 },
+      "rotationY": 180.0,
+      "size": { "x": 18.0, "y": 15.0, "z": 10.0 }
+    },
+    {
+      "id": "b005",
+      "name": "",
+      "category": "house",
+      "position": { "x": 80.0, "y": 0.0, "z": -30.0 },
+      "rotationY": 180.0,
+      "size": { "x": 10.0, "y": 7.0, "z": 10.0 }
+    },
+    {
+      "id": "b006",
+      "name": "中央公園",
+      "category": "park",
+      "position": { "x": 0.0, "y": 0.0, "z": -80.0 },
+      "rotationY": 0.0,
+      "size": { "x": 60.0, "y": 0.5, "z": 40.0 }
+    }
+  ],
+  "avatars": [
+    {
+      "id": "a001",
+      "buildingId": "b001",
+      "position": { "x": 22.0, "y": 0.0, "z": 30.0 },
+      "rotationY": 180.0,
+      "appearance": { "bodyType": "type_b", "hairStyle": "short_02", "hairColor": "#3B2A1A", "outfit": "casual_05" },
+      "emotion": "neutral",
+      "voice": "夕方はレジが混む。朝は空いてる",
+      "comment": "夕方17〜19時はレジが混んでいて10分くらい並ぶ。朝9時台はガラガラで快適。"
+    },
+    {
+      "id": "a002",
+      "buildingId": "b002",
+      "position": { "x": -30.0, "y": 0.0, "z": 3.0 },
+      "rotationY": 0.0,
+      "appearance": { "bodyType": "type_a", "hairStyle": "long_01", "hairColor": "#1A1A1A", "outfit": "casual_02" },
+      "emotion": "happy",
+      "voice": "24時間開いてて夜勤明けに助かる",
+      "comment": "駅から家までの途中にあって、夜勤明けでも寄れるのが本当に助かっています。"
+    },
+    {
+      "id": "a003",
+      "buildingId": "b004",
+      "position": { "x": 50.0, "y": 0.0, "z": -22.0 },
+      "rotationY": 0.0,
+      "appearance": { "bodyType": "type_c", "hairStyle": "short_01", "hairColor": "#6B4B2A", "outfit": "suit_01" },
+      "emotion": "annoyed",
+      "voice": "夜は前の道のトラックがうるさい",
+      "comment": "22時以降も前の道をトラックがよく通るので、道路側の部屋だと窓を閉めても音が気になります。"
+    },
+    {
+      "id": "a004",
+      "buildingId": "b006",
+      "position": { "x": 10.0, "y": 0.0, "z": -70.0 },
+      "rotationY": 90.0,
+      "appearance": { "bodyType": "type_a", "hairStyle": "short_02", "hairColor": "#A0522D", "outfit": "casual_01" },
+      "emotion": "happy",
+      "voice": "公園がきれいで子ども連れが多い",
+      "comment": "中央公園は遊具が新しくて手入れもされている。休日は子ども連れで賑わっています。"
+    },
+    {
+      "id": "a005",
+      "buildingId": "",
+      "position": { "x": -10.0, "y": 0.0, "z": -40.0 },
+      "rotationY": 270.0,
+      "appearance": { "bodyType": "type_b", "hairStyle": "long_01", "hairColor": "#2B2B2B", "outfit": "casual_03" },
+      "emotion": "worried",
+      "voice": "この辺り、夜は街灯が少なくて暗い",
+      "comment": "駅から公園側に抜ける道は街灯が少なくて、夜の一人歩きは少し怖いです。"
+    }
+  ]
+}

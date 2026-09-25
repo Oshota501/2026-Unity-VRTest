@@ -1,0 +1,248 @@
+{
+  "cityId": "sample",
+  "cityName": "サンプル市",
+  "mode": "ideal",
+  "generatedAt": "2026-09-25T09:00:00Z",
+  "bounds": {
+    "min": {
+      "x": -200.0,
+      "y": 0.0,
+      "z": -200.0
+    },
+    "max": {
+      "x": 200.0,
+      "y": 0.0,
+      "z": 200.0
+    }
+  },
+  "buildings": [
+    {
+      "id": "b001",
+      "name": "サンプルマート",
+      "category": "supermarket",
+      "position": {
+        "x": 20.0,
+        "y": 0.0,
+        "z": 40.0
+      },
+      "rotationY": 90.0,
+      "size": {
+        "x": 20.0,
+        "y": 6.0,
+        "z": 15.0
+      }
+    },
+    {
+      "id": "b002",
+      "name": "コンビニ駅前店",
+      "category": "convenience_store",
+      "position": {
+        "x": -30.0,
+        "y": 0.0,
+        "z": 10.0
+      },
+      "rotationY": 0.0,
+      "size": {
+        "x": 10.0,
+        "y": 4.0,
+        "z": 8.0
+      }
+    },
+    {
+      "id": "b003",
+      "name": "サンプル駅",
+      "category": "station",
+      "position": {
+        "x": -60.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotationY": 0.0,
+      "size": {
+        "x": 40.0,
+        "y": 10.0,
+        "z": 12.0
+      }
+    },
+    {
+      "id": "b004",
+      "name": "",
+      "category": "apartment",
+      "position": {
+        "x": 50.0,
+        "y": 0.0,
+        "z": -30.0
+      },
+      "rotationY": 180.0,
+      "size": {
+        "x": 18.0,
+        "y": 15.0,
+        "z": 10.0
+      }
+    },
+    {
+      "id": "b005",
+      "name": "",
+      "category": "house",
+      "position": {
+        "x": 80.0,
+        "y": 0.0,
+        "z": -30.0
+      },
+      "rotationY": 180.0,
+      "size": {
+        "x": 10.0,
+        "y": 7.0,
+        "z": 10.0
+      }
+    },
+    {
+      "id": "b006",
+      "name": "中央公園",
+      "category": "park",
+      "position": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": -80.0
+      },
+      "rotationY": 0.0,
+      "size": {
+        "x": 60.0,
+        "y": 0.5,
+        "z": 40.0
+      }
+    },
+    {
+      "id": "b007",
+      "name": "サンプル小学校",
+      "category": "school",
+      "position": {
+        "x": -40.0,
+        "y": 0.0,
+        "z": -110.0
+      },
+      "rotationY": 0.0,
+      "size": {
+        "x": 30.0,
+        "y": 12.0,
+        "z": 20.0
+      }
+    }
+  ],
+  "avatars": [
+    {
+      "id": "a001",
+      "buildingId": "b001",
+      "position": {
+        "x": 22.0,
+        "y": 0.0,
+        "z": 30.0
+      },
+      "rotationY": 180.0,
+      "appearance": {
+        "bodyType": "type_b",
+        "hairStyle": "short_02",
+        "hairColor": "#3B2A1A",
+        "outfit": "casual_05"
+      },
+      "emotion": "happy",
+      "voice": "セルフレジが増えて夕方も待たない",
+      "comment": "セルフレジが増えたので、夕方17〜19時でもほとんど並ばずに買い物できるようになった。"
+    },
+    {
+      "id": "a002",
+      "buildingId": "b002",
+      "position": {
+        "x": -30.0,
+        "y": 0.0,
+        "z": 3.0
+      },
+      "rotationY": 0.0,
+      "appearance": {
+        "bodyType": "type_a",
+        "hairStyle": "long_01",
+        "hairColor": "#1A1A1A",
+        "outfit": "casual_02"
+      },
+      "emotion": "happy",
+      "voice": "24時間開いてて夜勤明けに助かる",
+      "comment": "駅から家までの途中にあって、夜勤明けでも寄れるのが本当に助かっています。"
+    },
+    {
+      "id": "a003",
+      "buildingId": "b004",
+      "position": {
+        "x": 50.0,
+        "y": 0.0,
+        "z": -22.0
+      },
+      "rotationY": 0.0,
+      "appearance": {
+        "bodyType": "type_c",
+        "hairStyle": "short_01",
+        "hairColor": "#6B4B2A",
+        "outfit": "suit_01"
+      },
+      "emotion": "neutral",
+      "voice": "防音壁ができて夜も静かになった",
+      "comment": "道路沿いに防音壁ができて、22時以降のトラックの音がほとんど気にならなくなりました。"
+    },
+    {
+      "id": "a004",
+      "buildingId": "b006",
+      "position": {
+        "x": 10.0,
+        "y": 0.0,
+        "z": -70.0
+      },
+      "rotationY": 90.0,
+      "appearance": {
+        "bodyType": "type_a",
+        "hairStyle": "short_02",
+        "hairColor": "#A0522D",
+        "outfit": "casual_01"
+      },
+      "emotion": "happy",
+      "voice": "公園がきれいで子ども連れが多い",
+      "comment": "中央公園は遊具が新しくて手入れもされている。休日は子ども連れで賑わっています。"
+    },
+    {
+      "id": "a005",
+      "buildingId": "",
+      "position": {
+        "x": -10.0,
+        "y": 0.0,
+        "z": -40.0
+      },
+      "rotationY": 270.0,
+      "appearance": {
+        "bodyType": "type_b",
+        "hairStyle": "long_01",
+        "hairColor": "#2B2B2B",
+        "outfit": "casual_03"
+      },
+      "emotion": "happy",
+      "voice": "街灯が増えて夜も歩きやすい",
+      "comment": "駅から公園側に抜ける道に街灯が増えて、夜の一人歩きでも安心できるようになりました。"
+    },
+    {
+      "id": "a006",
+      "buildingId": "b007",
+      "position": {
+        "x": -40.0,
+        "y": 0.0,
+        "z": -96.0
+      },
+      "rotationY": 180.0,
+      "appearance": {
+        "bodyType": "type_c",
+        "hairStyle": "long_01",
+        "hairColor": "#4A3020",
+        "outfit": "casual_04"
+      },
+      "emotion": "happy",
+      "voice": "学校が近くて子育てしやすい",
+      "comment": "小学校が歩いて数分のところにでき、通学路にも見守りの人がいて安心です。"
+    }
+  ]
+}
