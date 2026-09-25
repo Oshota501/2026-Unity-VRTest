@@ -6,6 +6,8 @@ using UnityEngine;
 namespace TownReview.Infrastructure
 {
     // 都市データ（建物・住民）を取得して CityBuilder に渡す。
+    // CityBuilder を設定しない場合は、取得結果を Loaded イベントで知らせるだけにする
+    // （SampleScene の ApiPersonVisualizer のように、別のコンポーネントが表示を担当する場合）。
     // 「どこから取得するか（仮のJSON / API）」はこのコンポーネントで切り替える。
     // Core層の CityBuilder は ICitySnapshotRepository の具体的な実装を知らなくてよいようにしている。
     //
@@ -18,7 +20,7 @@ namespace TownReview.Infrastructure
             Api        // CityApiSettings の接続先に GET /v1/cities/{cityId}/snapshot を送る
         }
 
-        [Tooltip("取得したデータを表示する CityBuilder。未設定なら同じオブジェクトから探す。")]
+        [Tooltip("取得したデータを表示する CityBuilder。未設定なら同じオブジェクトから探し、なければ Loaded イベントを出すだけにする。")]
         [SerializeField] private CityBuilder cityBuilder;
 
         [SerializeField] private Source source = Source.LocalJson;
@@ -75,12 +77,6 @@ namespace TownReview.Infrastructure
 
         public void Load(CityMode newMode)
         {
-            if (cityBuilder == null)
-            {
-                Debug.LogError($"{nameof(CitySnapshotLoader)}: CityBuilder が設定されていません。", this);
-                return;
-            }
-
             if (!TryCreateRepository(out ICitySnapshotRepository repository, out string cityId))
             {
                 return;
@@ -151,7 +147,10 @@ namespace TownReview.Infrastructure
                 Debug.LogWarning($"{nameof(CitySnapshotLoader)}: mode={CityEnumParser.ToApiValue(mode)} を要求しましたが、レスポンスの mode は \"{snapshot.Mode}\" でした。", this);
             }
 
-            cityBuilder.Build(snapshot);
+            if (cityBuilder != null)
+            {
+                cityBuilder.Build(snapshot);
+            }
             Debug.Log($"{nameof(CitySnapshotLoader)}: 「{snapshot.CityName}」（{snapshot.Mode}）を読み込みました。建物 {snapshot.Buildings.Count} 件 / 住民 {snapshot.Avatars.Count} 人", this);
             Loaded?.Invoke(snapshot);
         }

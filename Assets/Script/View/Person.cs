@@ -37,6 +37,16 @@ public class Person : MonoBehaviour
     {
         bassHeight = transform.position;
     }
+
+    // 表示するコメントを外から設定する（APIから取得した住民のコメントを入れるときに使う）
+    public void SetComment(string text)
+    {
+        comment = text;
+        if (commentText != null)
+        {
+            commentText.text = text;
+        }
+    }
     public virtual void ClosedPlayer()
     {
         transform.position = bassHeight + new Vector3(0f, 0.1f, 0f);

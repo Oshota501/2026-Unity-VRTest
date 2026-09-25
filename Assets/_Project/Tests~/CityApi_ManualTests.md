@@ -68,3 +68,19 @@ B・C の確認の前に一度だけ行う。
 5. 吹き出しを出す場合：`CityRoot`（または UI用のオブジェクト）に Add Component → `ResidentVoiceBubbles`。Font に日本語入りの TMP フォントアセット（口コミパネルと同じもの）を設定する。
 6. 口コミパネル（`ReviewPanel` が付いたオブジェクト）はそのままでよい（住民に触れたときのコメント表示に自動で対応している）。
 7. API に切り替える場合：Project ウィンドウで `Assets/_Project/Data` を右クリック → Create → TownReview → City API Settings。できた `CityApiSettings` に Base URL / City Id を入れ、`CitySnapshotLoader` の Source を `Api`、Api Settings にそのファイルを設定する。
+
+## E. SampleScene（Person を使った住民表示）で確認する項目
+
+準備：プルリクエスト／作業説明の「SampleScene での設定手順」を済ませておく（`ApiPersonManager` に CitySnapshotLoader と ApiPersonVisualizer を付ける）。
+
+| No | 手順 | 期待結果 |
+|---|---|---|
+| E-1 | `Assets/Scenes/SampleScene` を開いて再生 | Hierarchy の `ApiPersonManager` の下に `Person_a001`〜`Person_a005` ができる。Console に「建物 6 件 / 住民 5 人」。建物は作られない |
+| E-2 | `Person_a001` を選択 | Position が (22, 0.5, 30)（Height Offset = 0.5 の場合）。Cube が床に半分埋まっていない |
+| E-3 | WASD で `Person_a001` に 6m 以内まで近づく | Cube が少し浮き、頭上に「「夕方はレジが混む。朝は空いてる」」と、その下にコメント全文が20文字ごとに改行されて出る。文字がカメラの方を向く |
+| E-4 | 6m より離れる | コメントが消え、Cube が元の高さに戻る |
+| E-5 | 高い位置（Player の初期位置 y=10 など）から近づく | 高さの差に関係なく、水平距離 6m 以内で表示される |
+| E-6 | Text Mode を Voice にして再生 | 一言だけ表示される |
+| E-7 | 再生中に CitySnapshotLoader の Mode を Ideal にして右クリック → Reload | 住民が 6 人に置き換わる（古い住民が残らない）。a005 の一言が「街灯が増えて夜も歩きやすい」 |
+| E-8 | 日本語フォントを設定していない状態で E-3 | 文字が □ になる（→ 設定手順の「日本語フォント」を行えば直る） |
+| E-9 | Source = Api、仮APIサーバー（C-6）で E-1〜E-4 | 同じ結果 |
