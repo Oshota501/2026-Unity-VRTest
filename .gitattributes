@@ -1,0 +1,15 @@
+# Git LFSで管理する大きなバイナリファイル
+# 対象は Assets/_Project/ 配下（自作の3D都市データ・アート素材）のみに限定する。
+# 拡張子だけで全体を対象にすると、TextMesh Proなど既存の同梱アセット（.png等）まで
+# LFS管理下に入ってしまい、git-lfs未インストール環境で git status 自体が失敗するため。
+
+Assets/_Project/CityData/** filter=lfs diff=lfs merge=lfs -text
+Assets/_Project/Art/** filter=lfs diff=lfs merge=lfs -text
+Assets/_Project/Prefabs/** filter=lfs diff=lfs merge=lfs -text
+
+# PLATEAUの元データ形式（保存場所によらず対象にする）
+*.citygml filter=lfs diff=lfs merge=lfs -text
+*.gml filter=lfs diff=lfs merge=lfs -text
+
+# PLATEAU SDKがAddressables経由で書き出す街データ本体（.bundle、数MB〜十数MB単位）
+Assets/StreamingAssets/PLATEAUBundles/** filter=lfs diff=lfs merge=lfs -text

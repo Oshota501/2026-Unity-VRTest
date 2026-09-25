@@ -1,0 +1,62 @@
+[
+  {
+    "id": "kyobashi-001",
+    "mesh_code": "52350432",
+    "time_of_day": "Night",
+    "status": "Approved",
+    "night_safety": 3,
+    "night_noise": 2,
+    "holiday_noise": 3,
+    "daytime_traffic": 2,
+    "convenience": 5,
+    "comment": "駅前は夜でも人通りが多く、女性一人でも比較的安心して歩けます。ただ飲み屋街に近い一部の通りは酔っ払いが多いので注意した方がいいです。"
+  },
+  {
+    "id": "kyobashi-002",
+    "mesh_code": "52350432",
+    "time_of_day": "Day",
+    "status": "Approved",
+    "night_safety": 4,
+    "night_noise": 3,
+    "holiday_noise": 4,
+    "daytime_traffic": 1,
+    "convenience": 5,
+    "comment": "平日昼間は通勤・通学客でとにかく人が多く、大きな荷物があると歩きにくいです。ただ駅ナカ・駅周辺の店はかなり充実していて便利。"
+  },
+  {
+    "id": "kyobashi-003",
+    "mesh_code": "52350432",
+    "time_of_day": "Holiday",
+    "status": "Approved",
+    "night_safety": 3,
+    "night_noise": 2,
+    "holiday_noise": 2,
+    "daytime_traffic": 2,
+    "convenience": 4,
+    "comment": "休日は買い物客や飲み屋帰りの人で賑わいますが、平日ほどの混雑感はなくゆったり歩けます。商店街もあって過ごしやすいエリアです。"
+  },
+  {
+    "id": "kyobashi-004",
+    "mesh_code": "52350432",
+    "time_of_day": "Night",
+    "status": "Pending",
+    "night_safety": 2,
+    "night_noise": 1,
+    "holiday_noise": 2,
+    "daytime_traffic": 3,
+    "convenience": 4,
+    "comment": "終電が近づくと酔っ払いの声が大きくなり、静かに過ごしたい人には少し騒がしいかもしれません（審査中データの動作確認用）。"
+  },
+  {
+    "id": "kyobashi-005",
+    "mesh_code": "52350432",
+    "time_of_day": "Day",
+    "status": "Rejected",
+    "night_safety": 5,
+    "night_noise": 5,
+    "holiday_noise": 5,
+    "daytime_traffic": 5,
+    "convenience": 1,
+    "comment": "テスト投稿（却下データの動作確認用）。"
+  }
+]
