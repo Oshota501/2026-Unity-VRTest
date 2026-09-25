@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.synesthesias.plateau-unity-sdk": "file:/Users/kannoryota/Downloads/PLATEAU-SDK-for-Unity-v4.3.0.0.tgz",
+    "com.synesthesias.plateau-unity-sdk": "https://github.com/Project-PLATEAU/PLATEAU-SDK-for-Unity.git#v4.3.0",
     "com.unity.ai.navigation": "2.0.12",
     "com.unity.collab-proxy": "2.12.4",
     "com.unity.ide.rider": "3.0.40",

@@ -13,4 +13,18 @@ MonoBehaviour:
   m_Name: Buildings
   m_EditorClassIdentifier: Assembly-CSharp::BuildingRegistry
   view:
-  - {fileID: 7159167085293462541, guid: 8e71051f0c5af494b8f8a027b52757b1, type: 3}
+  - {fileID: 3394617499882802034, guid: fe2b9b594e73b4ebe8ee4cf540c09fee, type: 3}
+  - {fileID: 7674626663644130136, guid: 29feba6a2bb9e4c0cb236d346160b9b4, type: 3}
+  - {fileID: 6637749804819351197, guid: 370b3a18adff940398ddd2f7153d1555, type: 3}
+  - {fileID: 6379504384150450820, guid: e2d1522e9cd44412fa73405ef3135c01, type: 3}
+  - {fileID: 3347502290464461216, guid: 556e95883893244558357bee310de590, type: 3}
+  - {fileID: 1768590555280126626, guid: a631d9c5422914ef58b6db5e138ce4b6, type: 3}
+  - {fileID: 5362099689704266016, guid: 6d015dc1664f94e5c8209a0afcfc2d9d, type: 3}
+  - {fileID: 180359078234664927, guid: b51a20da48c464b24b9b49209f4c525e, type: 3}
+  - {fileID: 1148774884954350677, guid: a89577bca41bf48e880c9cbf7d7dffaa, type: 3}
+  - {fileID: 4334876820544704123, guid: 47589472f9d8c4782bc8a899e119c2dc, type: 3}
+  - {fileID: 2241785789244697741, guid: 4d62f2ca921974b17a5c05a84eb43c34, type: 3}
+  - {fileID: 8921419849380942324, guid: 12d3390756e694936b47a7fd949c13ab, type: 3}
+  - {fileID: 5658285382543588898, guid: feeeb2cb3c1254be1b8ab6604b85cb0b, type: 3}
+  - {fileID: 4293288377189101274, guid: b7dffb7871a494b7aaa4cd302a05417c, type: 3}
+  - {fileID: 2406603403380274913, guid: aa27a2dcd1be0491d932fda9d538c991, type: 3}
