@@ -114,3 +114,8 @@ InitTestScene*.unity*
 # Unity Editorが生成するテストビルド・Burstデバッグ情報のバックアップフォルダ
 testBuild_BackUpThisFolder_ButDontShipItWithYourGame/
 *_BurstDebugInformation_DoNotShip/
+# Unity外で動かすテストプロジェクト（Assets/_Project/Tests~）。
+# .csproj は上の *.csproj で除外されるため、このフォルダだけ例外にする。ビルド結果は含めない。
+!/Assets/_Project/Tests~/**/*.csproj
+/Assets/_Project/Tests~/**/bin/
+/Assets/_Project/Tests~/**/obj/

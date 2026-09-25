@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    都市API（CitySnapshot）まわりのうち、UnityEngine を使わない部分をUnityの外でテストするためのプロジェクト。
+    フォルダ名が「~」で終わるため、Unityはこのフォルダを読み込まない（ビルドにも含まれない）。
+    実行方法：リポジトリのルートで  dotnet test "Assets/_Project/Tests~/CityApi.Tests"
+  -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <!-- Unity 6 と同じ C# 9 に合わせ、Unityで使えない書き方をしていないか確認する -->
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <IsPackable>false</IsPackable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- テスト対象（Assets/_Project/Scripts のファイルをそのまま参照する） -->
+    <Compile Include="../../Scripts/Core/City/CitySnapshot.cs" Link="Source/CitySnapshot.cs" />
+    <Compile Include="../../Scripts/Core/City/CityEnums.cs" Link="Source/CityEnums.cs" />
+    <Compile Include="../../Scripts/Core/City/CitySnapshotParser.cs" Link="Source/CitySnapshotParser.cs" />
+    <Compile Include="../../Scripts/Core/City/CitySnapshotValidator.cs" Link="Source/CitySnapshotValidator.cs" />
+    <Compile Include="../../Scripts/Core/City/ICitySnapshotRepository.cs" Link="Source/ICitySnapshotRepository.cs" />
+    <Compile Include="../../Scripts/Infrastructure/CityApiEndpoints.cs" Link="Source/CityApiEndpoints.cs" />
+    <Compile Include="../../Scripts/Infrastructure/LocalCitySnapshotRepository.cs" Link="Source/LocalCitySnapshotRepository.cs" />
+
+    <!-- テストコード -->
+    <Compile Include="*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../../Data/SampleCitySnapshot_Now.json" Link="Data/SampleCitySnapshot_Now.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="../../Data/SampleCitySnapshot_Ideal.json" Link="Data/SampleCitySnapshot_Ideal.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- com.unity.nuget.newtonsoft-json 3.2.2 と同じ Newtonsoft.Json 13.0.2 -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+  </ItemGroup>
+</Project>
