@@ -328,7 +328,7 @@ MonoBehaviour:
   comment: hello
   commentText: {fileID: 1897359662657653026}
   commentFont: {fileID: 11400000, guid: 169ee3a4e9a904f8ea0c8bcb1105a595, type: 2}
-  commentFontSize: 2
+  commentFontSize: 3
   closedLiftHeight: 0.1
   commentOffset: {x: 0, y: 1, z: 0}
   commentColor: {r: 1, g: 1, b: 1, a: 1}
@@ -569,8 +569,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 200
-  m_fontSizeBase: 200
+  m_fontSize: 350
+  m_fontSizeBase: 350
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
