@@ -125,3 +125,8 @@ testBuild_BackUpThisFolder_ButDontShipItWithYourGame/
 # ビルド時に .env から自動生成されるファイル（EnvBuildProcessor）
 /Assets/_Project/Data/Generated/
 /Assets/_Project/Data/Generated.meta
+
+# 日本語フォントの TMP フォントアセット（静的・8192×8192で約137MB）。
+# GitHub の上限（1ファイル100MB）を超えるため Git に入れない。各自 DotGothic16-Regular.ttf から作成する。
+/Assets/Scenes/DotGothic16-Regular SDF.asset
+/Assets/Scenes/DotGothic16-Regular SDF.asset.meta
