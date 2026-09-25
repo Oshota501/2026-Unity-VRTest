@@ -119,3 +119,9 @@ testBuild_BackUpThisFolder_ButDontShipItWithYourGame/
 !/Assets/_Project/Tests~/**/*.csproj
 /Assets/_Project/Tests~/**/bin/
 /Assets/_Project/Tests~/**/obj/
+
+# APIのURLなど、Gitに入れない設定（.env.example を .env にコピーして使う）
+.env
+# ビルド時に .env から自動生成されるファイル（EnvBuildProcessor）
+/Assets/_Project/Data/Generated/
+/Assets/_Project/Data/Generated.meta

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PersonRegistry
   m_EditorClassIdentifier: Assembly-CSharp::PersonRegistry
   view:
-  - {fileID: 7743264735241660055, guid: bdd68adeafeef44928907c4d7ed9d07d, type: 3}
+  - {fileID: 6693671051307593838, guid: 8bed7d186eb654dc5aafca2e725d4257, type: 3}

@@ -22,6 +22,7 @@
     <Compile Include="../../Scripts/Core/City/ICitySnapshotRepository.cs" Link="Source/ICitySnapshotRepository.cs" />
     <Compile Include="../../Scripts/Infrastructure/CityApiEndpoints.cs" Link="Source/CityApiEndpoints.cs" />
     <Compile Include="../../Scripts/Infrastructure/LocalCitySnapshotRepository.cs" Link="Source/LocalCitySnapshotRepository.cs" />
+    <Compile Include="../../Scripts/Infrastructure/DotEnvParser.cs" Link="Source/DotEnvParser.cs" />
 
     <!-- テストコード -->
     <Compile Include="*.cs" />

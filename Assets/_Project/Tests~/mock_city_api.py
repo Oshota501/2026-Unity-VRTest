@@ -8,7 +8,7 @@ Assets/_Project/Data/SampleCitySnapshot_Now.json / _Ideal.json をそのまま�
     python3 "Assets/_Project/Tests~/mock_city_api.py"            # http://localhost:8080
     python3 "Assets/_Project/Tests~/mock_city_api.py" --port 9000
 
-  CityApiSettings の Base URL を http://localhost:8080 、City Id を sample にする。
+  プロジェクト直下の .env に CITY_API_BASE_URL=http://localhost:8080 と書き、CityApiSettings の City Id を sample にする。
 
 仕様どおりの応答:
     200  /v1/cities/sample/snapshot?mode=now|ideal（mode 省略時は now）
